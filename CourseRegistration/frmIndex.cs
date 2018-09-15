@@ -11,9 +11,9 @@ using DevExpress.XtraBars;
 
 namespace CourseRegistration
 {
-    public partial class Index : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frmIndex : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public Index()
+        public frmIndex()
         {
             InitializeComponent();
         }

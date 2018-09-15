@@ -1,6 +1,6 @@
 ﻿namespace CourseRegistration
 {
-    partial class Index
+    partial class frmIndex
     {
         /// <summary>
         /// Required designer variable.

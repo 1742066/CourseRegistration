@@ -19,7 +19,7 @@ namespace CourseRegistration
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Index index = new Index();
+            frmIndex index = new frmIndex();
             index.Show();
         }
     }
