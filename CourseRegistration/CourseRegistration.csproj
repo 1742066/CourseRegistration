@@ -35,10 +35,13 @@
   <ItemGroup>
     <Reference Include="DevExpress.Data.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,11 +61,53 @@
     <Compile Include="frmCreateMajors.Designer.cs">
       <DependentUpon>frmCreateMajors.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCreateSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateSubjects.Designer.cs">
+      <DependentUpon>frmCreateSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateThematic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateThematic.Designer.cs">
+      <DependentUpon>frmCreateThematic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditMajors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditMajors.Designer.cs">
+      <DependentUpon>frmEditMajors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditOpenThematic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditOpenThematic.Designer.cs">
+      <DependentUpon>frmEditOpenThematic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditSubjects.Designer.cs">
+      <DependentUpon>frmEditSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditThematic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditThematic.Designer.cs">
+      <DependentUpon>frmEditThematic.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenThematic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenThematic.Designer.cs">
+      <DependentUpon>frmOpenThematic.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +120,29 @@
     <EmbeddedResource Include="frmCreateMajors.resx">
       <DependentUpon>frmCreateMajors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateSubjects.resx">
+      <DependentUpon>frmCreateSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateThematic.resx">
+      <DependentUpon>frmCreateThematic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditMajors.resx">
+      <DependentUpon>frmEditMajors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditOpenThematic.resx">
+      <DependentUpon>frmEditOpenThematic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditSubjects.resx">
+      <DependentUpon>frmEditSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditThematic.resx">
+      <DependentUpon>frmEditThematic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenThematic.resx">
+      <DependentUpon>frmOpenThematic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

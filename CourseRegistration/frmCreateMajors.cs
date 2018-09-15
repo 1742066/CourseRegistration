@@ -17,5 +17,15 @@ namespace CourseRegistration
         {
             InitializeComponent();
         }
+
+        private void txtSuccessMaticNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            //int number = 0;
+            //if (!int.TryParse(txtSuccessMaticNumber.Text.Trim(), out number))
+            //{
+            //    MessageBox.Show("Chỉ được nhập số");
+            //    return;
+            //}
+        }
     }
 }

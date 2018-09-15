@@ -24,5 +24,54 @@ namespace CourseRegistration
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void btnEditMajoirs_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmEditMajors frm = new frmEditMajors();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnCreateSubjects_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmCreateSubjects frm = new frmCreateSubjects();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnEditSubjects_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmEditSubjects frm = new frmEditSubjects();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void CreateThematic_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmCreateThematic frm = new frmCreateThematic();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void EditThematic_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmEditThematic frm = new frmEditThematic();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnOpenThematic_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmOpenThematic frm = new frmOpenThematic();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnEditOpenThematic_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmEditOpenThematic frm = new frmEditOpenThematic();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

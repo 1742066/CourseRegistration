@@ -28,77 +28,159 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
-            this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            this.txtMajorsCode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbMessage = new System.Windows.Forms.Label();
+            this.txtMajorsName = new System.Windows.Forms.TextBox();
+            this.btnCreateMajors = new System.Windows.Forms.Button();
+            this.txtSuccessMaticNumber = new System.Windows.Forms.TextBox();
+            this.btnUp = new System.Windows.Forms.Button();
+            this.btnDown = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // layoutControl1
+            // txtMajorsCode
             // 
-            this.layoutControl1.Controls.Add(this.textEdit1);
-            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(542, 301);
-            this.layoutControl1.TabIndex = 0;
-            this.layoutControl1.Text = "layoutControl1";
+            this.txtMajorsCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMajorsCode.Location = new System.Drawing.Point(233, 65);
+            this.txtMajorsCode.Name = "txtMajorsCode";
+            this.txtMajorsCode.Size = new System.Drawing.Size(171, 23);
+            this.txtMajorsCode.TabIndex = 0;
             // 
-            // layoutControlGroup1
+            // label1
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(542, 301);
-            this.layoutControlGroup1.TextVisible = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(86, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nhập mã ngành";
             // 
-            // textEdit1
+            // label2
             // 
-            this.textEdit1.Location = new System.Drawing.Point(109, 12);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(421, 20);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 4;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(177, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(152, 23);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tạo mới ngành";
             // 
-            // layoutControlItem1
+            // label3
             // 
-            this.layoutControlItem1.Control = this.textEdit1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(522, 281);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(93, 13);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(86, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nhập tên ngành";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(86, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(213, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Số lượng chuyên đề hoàn thành";
+            // 
+            // lbMessage
+            // 
+            this.lbMessage.AutoSize = true;
+            this.lbMessage.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMessage.ForeColor = System.Drawing.Color.Red;
+            this.lbMessage.Location = new System.Drawing.Point(86, 191);
+            this.lbMessage.Name = "lbMessage";
+            this.lbMessage.Size = new System.Drawing.Size(0, 16);
+            this.lbMessage.TabIndex = 5;
+            // 
+            // txtMajorsName
+            // 
+            this.txtMajorsName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMajorsName.Location = new System.Drawing.Point(233, 102);
+            this.txtMajorsName.Name = "txtMajorsName";
+            this.txtMajorsName.Size = new System.Drawing.Size(171, 23);
+            this.txtMajorsName.TabIndex = 6;
+            // 
+            // btnCreateMajors
+            // 
+            this.btnCreateMajors.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateMajors.Location = new System.Drawing.Point(181, 226);
+            this.btnCreateMajors.Name = "btnCreateMajors";
+            this.btnCreateMajors.Size = new System.Drawing.Size(118, 31);
+            this.btnCreateMajors.TabIndex = 7;
+            this.btnCreateMajors.Text = "Tạo mới";
+            this.btnCreateMajors.UseVisualStyleBackColor = true;
+            // 
+            // txtSuccessMaticNumber
+            // 
+            this.txtSuccessMaticNumber.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSuccessMaticNumber.Location = new System.Drawing.Point(305, 140);
+            this.txtSuccessMaticNumber.Name = "txtSuccessMaticNumber";
+            this.txtSuccessMaticNumber.Size = new System.Drawing.Size(56, 23);
+            this.txtSuccessMaticNumber.TabIndex = 8;
+            this.txtSuccessMaticNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSuccessMaticNumber_KeyDown);
+            // 
+            // btnUp
+            // 
+            this.btnUp.Location = new System.Drawing.Point(367, 141);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(37, 22);
+            this.btnUp.TabIndex = 9;
+            this.btnUp.Text = "▲";
+            this.btnUp.UseVisualStyleBackColor = true;
+            // 
+            // btnDown
+            // 
+            this.btnDown.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDown.Location = new System.Drawing.Point(410, 140);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(37, 23);
+            this.btnDown.TabIndex = 10;
+            this.btnDown.Text = "▼ ";
+            this.btnDown.UseVisualStyleBackColor = true;
             // 
             // frmCreateMajors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 301);
-            this.Controls.Add(this.layoutControl1);
+            this.ClientSize = new System.Drawing.Size(510, 301);
+            this.Controls.Add(this.btnDown);
+            this.Controls.Add(this.btnUp);
+            this.Controls.Add(this.txtSuccessMaticNumber);
+            this.Controls.Add(this.btnCreateMajors);
+            this.Controls.Add(this.txtMajorsName);
+            this.Controls.Add(this.lbMessage);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtMajorsCode);
             this.Name = "frmCreateMajors";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tạo mới Ngành";
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
-            this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private System.Windows.Forms.TextBox txtMajorsCode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbMessage;
+        private System.Windows.Forms.TextBox txtMajorsName;
+        private System.Windows.Forms.Button btnCreateMajors;
+        private System.Windows.Forms.TextBox txtSuccessMaticNumber;
+        private System.Windows.Forms.Button btnUp;
+        private System.Windows.Forms.Button btnDown;
     }
 }
