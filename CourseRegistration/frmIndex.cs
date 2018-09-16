@@ -73,5 +73,26 @@ namespace CourseRegistration
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void CreateGroup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmCreateGroup frm = new frmCreateGroup();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void EditGroup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmEditGroup frm = new frmEditGroup();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnJoinGroup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmJoinGroup frm = new frmJoinGroup();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

@@ -40,6 +40,8 @@
             this.EditGroup = new DevExpress.XtraBars.BarButtonItem();
             this.OK = new DevExpress.XtraBars.BarButtonItem();
             this.btnOpenThematic = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEditOpenThematic = new DevExpress.XtraBars.BarButtonItem();
+            this.btnJoinGroup = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -50,14 +52,16 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnEditOpenThematic = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
+            this.txtAccountCode = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -78,9 +82,10 @@
             this.EditGroup,
             this.OK,
             this.btnOpenThematic,
-            this.btnEditOpenThematic});
+            this.btnEditOpenThematic,
+            this.btnJoinGroup});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 14;
+            this.ribbon.MaxItemId = 15;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -138,12 +143,14 @@
             this.CreateGroup.Caption = "Tạo mới";
             this.CreateGroup.Id = 9;
             this.CreateGroup.Name = "CreateGroup";
+            this.CreateGroup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CreateGroup_ItemClick);
             // 
             // EditGroup
             // 
             this.EditGroup.Caption = "Chỉnh sửa";
             this.EditGroup.Id = 10;
             this.EditGroup.Name = "EditGroup";
+            this.EditGroup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.EditGroup_ItemClick);
             // 
             // OK
             // 
@@ -157,6 +164,20 @@
             this.btnOpenThematic.Id = 12;
             this.btnOpenThematic.Name = "btnOpenThematic";
             this.btnOpenThematic.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOpenThematic_ItemClick);
+            // 
+            // btnEditOpenThematic
+            // 
+            this.btnEditOpenThematic.Caption = "Chỉnh sửa chuyên đề mở";
+            this.btnEditOpenThematic.Id = 13;
+            this.btnEditOpenThematic.Name = "btnEditOpenThematic";
+            this.btnEditOpenThematic.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEditOpenThematic_ItemClick);
+            // 
+            // btnJoinGroup
+            // 
+            this.btnJoinGroup.Caption = "Gia nhập nhóm";
+            this.btnJoinGroup.Id = 14;
+            this.btnJoinGroup.Name = "btnJoinGroup";
+            this.btnJoinGroup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnJoinGroup_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -223,11 +244,17 @@
             this.ribbonPageGroup9.ItemLinks.Add(this.btnOpenThematic);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnEditOpenThematic);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            // 
             // ribbonPage4
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7,
-            this.ribbonPageGroup8});
+            this.ribbonPageGroup8,
+            this.ribbonPageGroup11});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Quản lý nhóm";
             // 
@@ -240,6 +267,11 @@
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.EditGroup);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            // 
+            // ribbonPageGroup11
+            // 
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnJoinGroup);
+            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             // 
             // ribbonStatusBar
             // 
@@ -260,23 +292,27 @@
             // 
             this.tabbedView1.RootContainer.Element = null;
             // 
-            // ribbonPageGroup10
+            // ribbonPageCategory1
             // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.btnEditOpenThematic);
-            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
+            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
             // 
-            // btnEditOpenThematic
+            // txtAccountCode
             // 
-            this.btnEditOpenThematic.Caption = "Chỉnh sửa chuyên đề mở";
-            this.btnEditOpenThematic.Id = 13;
-            this.btnEditOpenThematic.Name = "btnEditOpenThematic";
-            this.btnEditOpenThematic.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEditOpenThematic_ItemClick);
+            this.txtAccountCode.AutoSize = true;
+            this.txtAccountCode.Location = new System.Drawing.Point(698, 33);
+            this.txtAccountCode.Name = "txtAccountCode";
+            this.txtAccountCode.Size = new System.Drawing.Size(24, 13);
+            this.txtAccountCode.TabIndex = 3;
+            this.txtAccountCode.Text = "dsa";
+            this.txtAccountCode.Visible = false;
             // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 449);
+            this.Controls.Add(this.txtAccountCode);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
@@ -325,5 +361,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem btnEditOpenThematic;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.BarButtonItem btnJoinGroup;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
+        private System.Windows.Forms.Label txtAccountCode;
+        private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
     }
 }
