@@ -24,6 +24,17 @@ namespace CourseRegistration
                 this.txtAccountCode.Text = value;
             }
         }
+        public string AccountType
+        {
+            get
+            {
+                return this.txtAccountType.Text;
+            }
+            set
+            {
+                this.txtAccountType.Text = value;
+            }
+        }
         public frmIndex()
         {
             InitializeComponent();
@@ -109,6 +120,20 @@ namespace CourseRegistration
         private void frmIndex_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnCreateAccount_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmCreateAccount frm = new frmCreateAccount();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnEditAccount_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmEditAccount frm = new frmEditAccount();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

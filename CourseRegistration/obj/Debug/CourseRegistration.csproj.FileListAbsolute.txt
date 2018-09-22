@@ -160,3 +160,5 @@ C:\Users\Trinh Thinh\Desktop\CourseRegistration\CourseRegistration\obj\Debug\Cou
 C:\Users\Trinh Thinh\Desktop\CourseRegistration\CourseRegistration\obj\Debug\CourseRegistration.frmCreateGroup.resources
 C:\Users\Trinh Thinh\Desktop\CourseRegistration\CourseRegistration\obj\Debug\CourseRegistration.frmEditGroup.resources
 C:\Users\Trinh Thinh\Desktop\CourseRegistration\CourseRegistration\obj\Debug\CourseRegistration.frmJoinGroup.resources
+C:\Users\Trinh Thinh\Desktop\CourseRegistration\CourseRegistration\obj\Debug\CourseRegistration.frmCreateAccount.resources
+C:\Users\Trinh Thinh\Desktop\CourseRegistration\CourseRegistration\obj\Debug\CourseRegistration.frmEditAccount.resources

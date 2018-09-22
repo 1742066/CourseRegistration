@@ -51,6 +51,7 @@ namespace CourseRegistration
                     while (reader.Read())
                     {
                         index.AccountCode = reader["AccountCode"].ToString();
+                        index.AccountType = reader["Type"].ToString();
                     }
                 }
             }

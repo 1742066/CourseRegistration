@@ -42,6 +42,8 @@
             this.btnOpenThematic = new DevExpress.XtraBars.BarButtonItem();
             this.btnEditOpenThematic = new DevExpress.XtraBars.BarButtonItem();
             this.btnJoinGroup = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCreateAccount = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEditAccount = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -57,11 +59,15 @@
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.txtAccountCode = new System.Windows.Forms.Label();
+            this.txtAccountType = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -83,15 +89,18 @@
             this.OK,
             this.btnOpenThematic,
             this.btnEditOpenThematic,
-            this.btnJoinGroup});
+            this.btnJoinGroup,
+            this.btnCreateAccount,
+            this.btnEditAccount});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 15;
+            this.ribbon.MaxItemId = 17;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage3,
-            this.ribbonPage4});
+            this.ribbonPage4,
+            this.ribbonPage5});
             this.ribbon.Size = new System.Drawing.Size(745, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -178,6 +187,20 @@
             this.btnJoinGroup.Id = 14;
             this.btnJoinGroup.Name = "btnJoinGroup";
             this.btnJoinGroup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnJoinGroup_ItemClick);
+            // 
+            // btnCreateAccount
+            // 
+            this.btnCreateAccount.Caption = "Tạo mới tài khoản";
+            this.btnCreateAccount.Id = 15;
+            this.btnCreateAccount.Name = "btnCreateAccount";
+            this.btnCreateAccount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreateAccount_ItemClick);
+            // 
+            // btnEditAccount
+            // 
+            this.btnEditAccount.Caption = "Chỉnh sửa tài khoản";
+            this.btnEditAccount.Id = 16;
+            this.btnEditAccount.Name = "btnEditAccount";
+            this.btnEditAccount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEditAccount_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -273,6 +296,24 @@
             this.ribbonPageGroup11.ItemLinks.Add(this.btnJoinGroup);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             // 
+            // ribbonPage5
+            // 
+            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup13});
+            this.ribbonPage5.Name = "ribbonPage5";
+            this.ribbonPage5.Text = "Tài khoản";
+            // 
+            // ribbonPageGroup12
+            // 
+            this.ribbonPageGroup12.ItemLinks.Add(this.btnCreateAccount);
+            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.ItemLinks.Add(this.btnEditAccount);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 418);
@@ -307,11 +348,22 @@
             this.txtAccountCode.Text = "label1";
             this.txtAccountCode.Visible = false;
             // 
+            // txtAccountType
+            // 
+            this.txtAccountType.AutoSize = true;
+            this.txtAccountType.Location = new System.Drawing.Point(669, 35);
+            this.txtAccountType.Name = "txtAccountType";
+            this.txtAccountType.Size = new System.Drawing.Size(35, 13);
+            this.txtAccountType.TabIndex = 6;
+            this.txtAccountType.Text = "label1";
+            this.txtAccountType.Visible = false;
+            // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 449);
+            this.Controls.Add(this.txtAccountType);
             this.Controls.Add(this.txtAccountCode);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -366,5 +418,11 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private System.Windows.Forms.Label txtAccountCode;
+        private System.Windows.Forms.Label txtAccountType;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.BarButtonItem btnCreateAccount;
+        private DevExpress.XtraBars.BarButtonItem btnEditAccount;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
     }
 }
