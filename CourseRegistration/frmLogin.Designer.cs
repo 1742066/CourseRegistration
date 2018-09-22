@@ -110,6 +110,7 @@
             this.Name = "v";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.v_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

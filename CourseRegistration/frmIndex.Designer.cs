@@ -300,11 +300,11 @@
             // txtAccountCode
             // 
             this.txtAccountCode.AutoSize = true;
-            this.txtAccountCode.Location = new System.Drawing.Point(698, 33);
+            this.txtAccountCode.Location = new System.Drawing.Point(710, 35);
             this.txtAccountCode.Name = "txtAccountCode";
-            this.txtAccountCode.Size = new System.Drawing.Size(24, 13);
+            this.txtAccountCode.Size = new System.Drawing.Size(35, 13);
             this.txtAccountCode.TabIndex = 3;
-            this.txtAccountCode.Text = "dsa";
+            this.txtAccountCode.Text = "label1";
             this.txtAccountCode.Visible = false;
             // 
             // frmIndex
@@ -322,6 +322,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Màn hình chính";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmIndex_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
@@ -363,7 +364,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.BarButtonItem btnJoinGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
-        private System.Windows.Forms.Label txtAccountCode;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
+        private System.Windows.Forms.Label txtAccountCode;
     }
 }

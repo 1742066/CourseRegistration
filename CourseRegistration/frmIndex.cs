@@ -13,6 +13,17 @@ namespace CourseRegistration
 {
     public partial class frmIndex : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public string AccountCode
+        {
+            get
+            {
+                return this.txtAccountCode.Text;
+            }
+            set
+            {
+                this.txtAccountCode.Text = value;
+            }
+        }
         public frmIndex()
         {
             InitializeComponent();
@@ -93,6 +104,11 @@ namespace CourseRegistration
             frmJoinGroup frm = new frmJoinGroup();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void frmIndex_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
