@@ -32,7 +32,7 @@
             this.rdOpen = new System.Windows.Forms.RadioButton();
             this.groupCheckEnable = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbSubjectsCode = new System.Windows.Forms.ComboBox();
+            this.cbMajorsCode = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
@@ -49,6 +49,8 @@
             this.rdNo = new System.Windows.Forms.RadioButton();
             this.rdYes = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpRuleDate = new System.Windows.Forms.DateTimePicker();
             this.groupCheckEnable.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -97,14 +99,15 @@
             this.label6.TabIndex = 43;
             this.label6.Text = "Tình trạng";
             // 
-            // cbSubjectsCode
+            // cbMajorsCode
             // 
-            this.cbSubjectsCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSubjectsCode.FormattingEnabled = true;
-            this.cbSubjectsCode.Location = new System.Drawing.Point(180, 105);
-            this.cbSubjectsCode.Name = "cbSubjectsCode";
-            this.cbSubjectsCode.Size = new System.Drawing.Size(185, 24);
-            this.cbSubjectsCode.TabIndex = 42;
+            this.cbMajorsCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMajorsCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMajorsCode.FormattingEnabled = true;
+            this.cbMajorsCode.Location = new System.Drawing.Point(180, 105);
+            this.cbMajorsCode.Name = "cbMajorsCode";
+            this.cbMajorsCode.Size = new System.Drawing.Size(185, 24);
+            this.cbMajorsCode.TabIndex = 42;
             // 
             // label5
             // 
@@ -112,9 +115,9 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(18, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 16);
+            this.label5.Size = new System.Drawing.Size(84, 16);
             this.label5.TabIndex = 41;
-            this.label5.Text = "Chọn bộ môn";
+            this.label5.Text = "Chọn ngành";
             // 
             // btnDown
             // 
@@ -152,6 +155,7 @@
             this.btnCreateThematic.TabIndex = 37;
             this.btnCreateThematic.Text = "Tạo mới";
             this.btnCreateThematic.UseVisualStyleBackColor = true;
+            this.btnCreateThematic.Click += new System.EventHandler(this.btnCreateThematic_Click);
             // 
             // txtThematicName
             // 
@@ -263,16 +267,36 @@
             this.label7.TabIndex = 45;
             this.label7.Text = "Bắt buộc";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(18, 245);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 16);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Ngày mở";
+            // 
+            // dtpRuleDate
+            // 
+            this.dtpRuleDate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpRuleDate.Location = new System.Drawing.Point(163, 243);
+            this.dtpRuleDate.Name = "dtpRuleDate";
+            this.dtpRuleDate.Size = new System.Drawing.Size(216, 23);
+            this.dtpRuleDate.TabIndex = 49;
+            // 
             // frmCreateThematic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 391);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.dtpRuleDate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupCheckEnable);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbSubjectsCode);
+            this.Controls.Add(this.cbMajorsCode);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnUp);
@@ -286,7 +310,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtThematicCode);
             this.Name = "frmCreateThematic";
-            this.Text = "Tạo chuyên ngành";
+            this.Text = "Tạo chuyên đề";
+            this.Load += new System.EventHandler(this.frmCreateThematic_Load);
             this.groupCheckEnable.ResumeLayout(false);
             this.groupCheckEnable.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -301,7 +326,7 @@
         private System.Windows.Forms.RadioButton rdOpen;
         private System.Windows.Forms.GroupBox groupCheckEnable;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbSubjectsCode;
+        private System.Windows.Forms.ComboBox cbMajorsCode;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnUp;
@@ -318,5 +343,7 @@
         private System.Windows.Forms.RadioButton rdNo;
         private System.Windows.Forms.RadioButton rdYes;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dtpRuleDate;
     }
 }

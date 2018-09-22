@@ -68,6 +68,8 @@
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.txtAccountCode = new System.Windows.Forms.Label();
             this.txtAccountType = new System.Windows.Forms.Label();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnPC = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -91,9 +93,10 @@
             this.btnEditOpenThematic,
             this.btnJoinGroup,
             this.btnCreateAccount,
-            this.btnEditAccount});
+            this.btnEditAccount,
+            this.btnPC});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 17;
+            this.ribbon.MaxItemId = 18;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -248,7 +251,8 @@
             this.ribbonPageGroup5,
             this.ribbonPageGroup6,
             this.ribbonPageGroup9,
-            this.ribbonPageGroup10});
+            this.ribbonPageGroup10,
+            this.ribbonPageGroup14});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "Quản lý chuyên đề";
             // 
@@ -358,6 +362,18 @@
             this.txtAccountType.Text = "label1";
             this.txtAccountType.Visible = false;
             // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnPC);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            // 
+            // btnPC
+            // 
+            this.btnPC.Caption = "Phân công chuyên đề";
+            this.btnPC.Id = 17;
+            this.btnPC.Name = "btnPC";
+            this.btnPC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPC_ItemClick);
+            // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,5 +440,7 @@
         private DevExpress.XtraBars.BarButtonItem btnEditAccount;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+        private DevExpress.XtraBars.BarButtonItem btnPC;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
     }
 }

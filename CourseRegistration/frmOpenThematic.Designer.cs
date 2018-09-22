@@ -55,6 +55,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dpTimeRes = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtClassName = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupCheckEnable.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -137,8 +139,9 @@
             this.btnOpenThematic.Name = "btnOpenThematic";
             this.btnOpenThematic.Size = new System.Drawing.Size(158, 31);
             this.btnOpenThematic.TabIndex = 54;
-            this.btnOpenThematic.Text = "Mở chuyên đề";
+            this.btnOpenThematic.Text = "Mở lớp";
             this.btnOpenThematic.UseVisualStyleBackColor = true;
+            this.btnOpenThematic.Click += new System.EventHandler(this.btnOpenThematic_Click);
             // 
             // label4
             // 
@@ -156,9 +159,9 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(272, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 23);
+            this.label2.Size = new System.Drawing.Size(75, 23);
             this.label2.TabIndex = 49;
-            this.label2.Text = "Mở chuyên đề";
+            this.label2.Text = "Mở lớp";
             // 
             // label1
             // 
@@ -184,7 +187,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(415, 66);
+            this.label3.Location = new System.Drawing.Point(415, 208);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 16);
             this.label3.TabIndex = 64;
@@ -203,7 +206,7 @@
             // 
             this.cbTeacherCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTeacherCode.FormattingEnabled = true;
-            this.cbTeacherCode.Location = new System.Drawing.Point(562, 63);
+            this.cbTeacherCode.Location = new System.Drawing.Point(562, 205);
             this.cbTeacherCode.Name = "cbTeacherCode";
             this.cbTeacherCode.Size = new System.Drawing.Size(216, 24);
             this.cbTeacherCode.TabIndex = 66;
@@ -324,11 +327,31 @@
             this.label10.TabIndex = 75;
             this.label10.Text = "Hạn đăng ký chuyên đề";
             // 
+            // txtClassName
+            // 
+            this.txtClassName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClassName.Location = new System.Drawing.Point(582, 63);
+            this.txtClassName.Name = "txtClassName";
+            this.txtClassName.Size = new System.Drawing.Size(185, 23);
+            this.txtClassName.TabIndex = 78;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(415, 66);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 16);
+            this.label11.TabIndex = 77;
+            this.label11.Text = "Tên lớp";
+            // 
             // frmOpenThematic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 431);
+            this.Controls.Add(this.txtClassName);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.dpTimeRes);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dpTimeGroup);
@@ -354,6 +377,7 @@
             this.Controls.Add(this.lbMessage);
             this.Name = "frmOpenThematic";
             this.Text = "Mở chuyên đề";
+            this.Load += new System.EventHandler(this.frmOpenThematic_Load);
             this.groupCheckEnable.ResumeLayout(false);
             this.groupCheckEnable.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -392,5 +416,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dpTimeRes;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtClassName;
+        private System.Windows.Forms.Label label11;
     }
 }

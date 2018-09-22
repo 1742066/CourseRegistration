@@ -135,5 +135,12 @@ namespace CourseRegistration
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void btnPC_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmPC frm = new frmPC();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

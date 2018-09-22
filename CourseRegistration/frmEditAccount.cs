@@ -207,7 +207,7 @@ namespace CourseRegistration
                 }
                 else
                 {
-                    command.Parameters.Add("@Sex", SqlDbType.Int).Value = 1;
+                    command.Parameters.Add("@Sex", SqlDbType.Int).Value = 0;
                 }
                 if (rbGV.Checked)
                 {

@@ -36,7 +36,7 @@
             this.rdClose = new System.Windows.Forms.RadioButton();
             this.rdOpen = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbSubjectsCode = new System.Windows.Forms.ComboBox();
+            this.cbMajorsCode = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
@@ -47,9 +47,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtThematicCode = new System.Windows.Forms.TextBox();
             this.lbMessage = new System.Windows.Forms.Label();
             this.btnDeleteThematic = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpRuleDate = new System.Windows.Forms.DateTimePicker();
+            this.cbThematicCode = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupCheckEnable.SuspendLayout();
             this.SuspendLayout();
@@ -142,24 +144,26 @@
             this.label6.TabIndex = 60;
             this.label6.Text = "Tình trạng";
             // 
-            // cbSubjectsCode
+            // cbMajorsCode
             // 
-            this.cbSubjectsCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSubjectsCode.FormattingEnabled = true;
-            this.cbSubjectsCode.Location = new System.Drawing.Point(178, 105);
-            this.cbSubjectsCode.Name = "cbSubjectsCode";
-            this.cbSubjectsCode.Size = new System.Drawing.Size(185, 24);
-            this.cbSubjectsCode.TabIndex = 59;
+            this.cbMajorsCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMajorsCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMajorsCode.FormattingEnabled = true;
+            this.cbMajorsCode.Location = new System.Drawing.Point(178, 63);
+            this.cbMajorsCode.Name = "cbMajorsCode";
+            this.cbMajorsCode.Size = new System.Drawing.Size(185, 24);
+            this.cbMajorsCode.TabIndex = 59;
+            this.cbMajorsCode.SelectedIndexChanged += new System.EventHandler(this.cbMajorsCode_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 109);
+            this.label5.Location = new System.Drawing.Point(16, 67);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 16);
+            this.label5.Size = new System.Drawing.Size(84, 16);
             this.label5.TabIndex = 58;
-            this.label5.Text = "Chọn bộ môn";
+            this.label5.Text = "Chọn ngành";
             // 
             // btnDown
             // 
@@ -197,6 +201,7 @@
             this.btnCreateThematic.TabIndex = 54;
             this.btnCreateThematic.Text = "Chỉnh sửa";
             this.btnCreateThematic.UseVisualStyleBackColor = true;
+            this.btnCreateThematic.Click += new System.EventHandler(this.btnCreateThematic_Click);
             // 
             // txtThematicName
             // 
@@ -240,19 +245,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 66);
+            this.label1.Location = new System.Drawing.Point(16, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 16);
             this.label1.TabIndex = 48;
             this.label1.Text = "Chọn mã chuyên đề";
-            // 
-            // txtThematicCode
-            // 
-            this.txtThematicCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThematicCode.Location = new System.Drawing.Point(180, 63);
-            this.txtThematicCode.Name = "txtThematicCode";
-            this.txtThematicCode.Size = new System.Drawing.Size(183, 23);
-            this.txtThematicCode.TabIndex = 47;
             // 
             // lbMessage
             // 
@@ -273,18 +270,51 @@
             this.btnDeleteThematic.TabIndex = 64;
             this.btnDeleteThematic.Text = "Xóa";
             this.btnDeleteThematic.UseVisualStyleBackColor = true;
+            this.btnDeleteThematic.Click += new System.EventHandler(this.btnDeleteThematic_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(16, 245);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 16);
+            this.label8.TabIndex = 72;
+            this.label8.Text = "Ngày mở";
+            // 
+            // dtpRuleDate
+            // 
+            this.dtpRuleDate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpRuleDate.Location = new System.Drawing.Point(161, 243);
+            this.dtpRuleDate.Name = "dtpRuleDate";
+            this.dtpRuleDate.Size = new System.Drawing.Size(216, 23);
+            this.dtpRuleDate.TabIndex = 73;
+            // 
+            // cbThematicCode
+            // 
+            this.cbThematicCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbThematicCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbThematicCode.FormattingEnabled = true;
+            this.cbThematicCode.Location = new System.Drawing.Point(178, 110);
+            this.cbThematicCode.Name = "cbThematicCode";
+            this.cbThematicCode.Size = new System.Drawing.Size(185, 24);
+            this.cbThematicCode.TabIndex = 74;
+            this.cbThematicCode.SelectedIndexChanged += new System.EventHandler(this.cbThematicCode_SelectedIndexChanged);
             // 
             // frmEditThematic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 370);
+            this.Controls.Add(this.cbThematicCode);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.dtpRuleDate);
             this.Controls.Add(this.btnDeleteThematic);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupCheckEnable);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbSubjectsCode);
+            this.Controls.Add(this.cbMajorsCode);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnUp);
@@ -295,10 +325,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtThematicCode);
             this.Controls.Add(this.lbMessage);
             this.Name = "frmEditThematic";
-            this.Text = "frmEditThematic";
+            this.Text = "Chỉnh sửa chuyên đề";
+            this.Load += new System.EventHandler(this.frmEditThematic_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupCheckEnable.ResumeLayout(false);
@@ -318,7 +348,7 @@
         private System.Windows.Forms.RadioButton rdClose;
         private System.Windows.Forms.RadioButton rdOpen;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbSubjectsCode;
+        private System.Windows.Forms.ComboBox cbMajorsCode;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnUp;
@@ -329,8 +359,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtThematicCode;
         private System.Windows.Forms.Label lbMessage;
         private System.Windows.Forms.Button btnDeleteThematic;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dtpRuleDate;
+        private System.Windows.Forms.ComboBox cbThematicCode;
     }
 }

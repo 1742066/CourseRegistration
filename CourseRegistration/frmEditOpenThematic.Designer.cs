@@ -178,6 +178,7 @@
             // 
             // cbTeacherCode
             // 
+            this.cbTeacherCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTeacherCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTeacherCode.FormattingEnabled = true;
             this.cbTeacherCode.Location = new System.Drawing.Point(557, 63);
@@ -187,12 +188,14 @@
             // 
             // cbThematicCode
             // 
+            this.cbThematicCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbThematicCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbThematicCode.FormattingEnabled = true;
             this.cbThematicCode.Location = new System.Drawing.Point(167, 60);
             this.cbThematicCode.Name = "cbThematicCode";
             this.cbThematicCode.Size = new System.Drawing.Size(216, 24);
             this.cbThematicCode.TabIndex = 88;
+            this.cbThematicCode.SelectedIndexChanged += new System.EventHandler(this.cbThematicCode_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -240,6 +243,7 @@
             this.btnEditOpenThematic.TabIndex = 81;
             this.btnEditOpenThematic.Text = "Chỉnh sửa";
             this.btnEditOpenThematic.UseVisualStyleBackColor = true;
+            this.btnEditOpenThematic.Click += new System.EventHandler(this.btnEditOpenThematic_Click);
             // 
             // label4
             // 
@@ -334,6 +338,7 @@
             this.btnDeleteOpenThematic.TabIndex = 100;
             this.btnDeleteOpenThematic.Text = "Xóa";
             this.btnDeleteOpenThematic.UseVisualStyleBackColor = true;
+            this.btnDeleteOpenThematic.Click += new System.EventHandler(this.btnDeleteOpenThematic_Click);
             // 
             // frmEditOpenThematic
             // 
@@ -366,6 +371,7 @@
             this.Controls.Add(this.groupCheckEnable);
             this.Name = "frmEditOpenThematic";
             this.Text = "Chỉnh sửa chuyên đề mở";
+            this.Load += new System.EventHandler(this.frmEditOpenThematic_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupCheckEnable.ResumeLayout(false);
