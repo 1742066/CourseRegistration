@@ -138,5 +138,41 @@ namespace CourseRegistration
                 MessageBox.Show("Lỗi xảy ra: " + ex.Message);
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            SqlConnection cnn = new SqlConnection(con);
+
+            frmIndex index = new frmIndex();
+            try
+            {
+                cnn.Open(); //Mở kết nối
+                SqlCommand command = new SqlCommand("DeleteAccount", cnn);
+                command.Parameters.Add("@AccountCode", SqlDbType.VarChar, 20).Value = cbAccountCode.Text;
+                command.CommandType = CommandType.StoredProcedure;
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if ((reader["Message"].ToString()) == "1")
+                    {
+                        MessageBox.Show("Xóa tài khoản thành công");
+                        LoadCbAccountCode();
+                    }
+                    else
+                    {
+                        MessageBox.Show(reader["Message"].ToString());
+
+                    }
+                }
+
+
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi xảy ra: " + ex.Message);
+            }
+        }
     }
 }
