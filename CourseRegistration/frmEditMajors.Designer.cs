@@ -77,6 +77,7 @@
             this.btnCreateMajors.TabIndex = 18;
             this.btnCreateMajors.Text = "Chỉnh sửa";
             this.btnCreateMajors.UseVisualStyleBackColor = true;
+            this.btnCreateMajors.Click += new System.EventHandler(this.btnCreateMajors_Click);
             // 
             // txtMajorsName
             // 
@@ -138,12 +139,14 @@
             // 
             // cbMajorsCode
             // 
+            this.cbMajorsCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMajorsCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMajorsCode.FormattingEnabled = true;
             this.cbMajorsCode.Location = new System.Drawing.Point(250, 78);
             this.cbMajorsCode.Name = "cbMajorsCode";
             this.cbMajorsCode.Size = new System.Drawing.Size(171, 24);
             this.cbMajorsCode.TabIndex = 22;
+            this.cbMajorsCode.SelectedIndexChanged += new System.EventHandler(this.cbMajorsCode_SelectedIndexChanged);
             // 
             // frmEditMajors
             // 
@@ -163,6 +166,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmEditMajors";
             this.Text = "Chỉnh sửa Ngành";
+            this.Load += new System.EventHandler(this.frmEditMajors_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

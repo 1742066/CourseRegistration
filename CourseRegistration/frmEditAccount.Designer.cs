@@ -297,6 +297,7 @@
             this.btnEditAccount.TabIndex = 65;
             this.btnEditAccount.Text = "Chỉnh sửa";
             this.btnEditAccount.UseVisualStyleBackColor = true;
+            this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click);
             // 
             // txtAccountName
             // 

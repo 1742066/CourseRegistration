@@ -174,5 +174,73 @@ namespace CourseRegistration
                 MessageBox.Show("Lỗi xảy ra: " + ex.Message);
             }
         }
+
+        private void btnEditAccount_Click(object sender, EventArgs e)
+        {
+            EditAccountCode();
+        }
+
+        public void EditAccountCode()
+        {
+            SqlConnection cnn = new SqlConnection(con);
+
+            frmIndex index = new frmIndex();
+            try
+            {
+                cnn.Open(); //Mở kết nối
+                SqlCommand command = new SqlCommand("UpdateAccount", cnn);
+                command.Parameters.Add("@AccountCode", SqlDbType.NVarChar, 20).Value = cbAccountCode.Text;
+                command.Parameters.Add("@PassWord", SqlDbType.NVarChar, 20).Value = txtPW.Text;
+                command.Parameters.Add("@PWConfirm", SqlDbType.NVarChar, 20).Value = txtPWCF.Text;
+                command.Parameters.Add("@FullName", SqlDbType.NVarChar, 20).Value = txtAccountName.Text;
+                if (rdOpen.Checked)
+                {
+                    command.Parameters.Add("@Enable", SqlDbType.Int).Value = 1;
+                }
+                else
+                {
+                    command.Parameters.Add("@Enable", SqlDbType.Int).Value = 0;
+                }
+                if (rbNam.Checked)
+                {
+                    command.Parameters.Add("@Sex", SqlDbType.Int).Value = 1;
+                }
+                else
+                {
+                    command.Parameters.Add("@Sex", SqlDbType.Int).Value = 1;
+                }
+                if (rbGV.Checked)
+                {
+                    command.Parameters.Add("@Type", SqlDbType.Int).Value = 1;
+                }
+                else if (rbSV.Checked)
+                {
+                    command.Parameters.Add("@Type", SqlDbType.Int).Value = 2;
+                }
+                command.Parameters.Add("@BirthDay", SqlDbType.Date).Value = dtpBirthDate.Text;
+                command.Parameters.Add("@Address", SqlDbType.NVarChar, 300).Value = txtAddr.Text;
+                command.Parameters.Add("@MajorsCode", SqlDbType.NVarChar, 20).Value = cbMajorsCode.Text;
+                command.CommandType = CommandType.StoredProcedure;
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if ((reader["Message"].ToString()) == "1")
+                    {
+                        MessageBox.Show("Chỉnh sửa tài khoản thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show(reader["Message"].ToString());
+
+                    }
+                }
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi xảy ra: " + ex.Message);
+            }
+        }
     }
 }

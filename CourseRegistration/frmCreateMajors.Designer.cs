@@ -116,6 +116,7 @@
             this.btnCreateMajors.TabIndex = 7;
             this.btnCreateMajors.Text = "Tạo mới";
             this.btnCreateMajors.UseVisualStyleBackColor = true;
+            this.btnCreateMajors.Click += new System.EventHandler(this.btnCreateMajors_Click);
             // 
             // txtSuccessMaticNumber
             // 
